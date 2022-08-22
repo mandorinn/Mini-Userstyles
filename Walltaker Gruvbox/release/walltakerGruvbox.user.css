@@ -1,0 +1,153 @@
+/* ==UserStyle==
+@name           Walltaker Gruvbox
+@namespace      WalltakerG
+@version        1.0.0
+@description	Gruvbox theme for Walltaker
+@author         mandorinn
+@preprocessor stylus
+
+@var color accent "Accent"  #fb346c
+@var select   accntSel   "Site accent"   {
+  "Default": " default",
+  "Custom*": "accent",
+}
+==/UserStyle== */
+
+@-moz-document domain("walltaker.joi.how") {
+
+	
+	
+	if accntSel == default	{
+	:root {
+		--accent: #ffb300;
+	}
+}
+if accntSel == accent{
+	:root {
+		--accent: accent;
+	}
+}
+
+	
+	:root {
+		color-scheme: dark;
+		--bg: #282828;
+		--accent-bg: #3c3836;
+		--text: #ebdbb2;
+		--text-light: #fbf1c7;
+		--border: #d5c4a17a;
+		--code: #d3869b;
+		--preformatted: #a89984;
+		--disabled: #1d2021;
+		--danger: #981e19;
+		--success: #8ec07c;
+		--regal-purple: #b162ad;
+		--jade: #50e176;
+		--ruby: #cc241d;
+		--uranium: #9fdf1f;
+		--platinum: #c7c2bd;
+		--gold: #d79921;
+		--silver: #938e88;
+		--bronze: #604a39;
+		--tin: #928374;
+		--driftwood: #334d18;
+	}
+	
+	/* Badges */ 
+	.text-charm__medal-regal-purple {
+		background: var(--regal-purple);
+	}
+	.text-charm__medal-jade {
+		background: var(--jade);
+	}
+	.text-charm__medal-ruby {
+		background: var(--ruby);
+	}
+	.text-charm__medal-uranium {
+		background: var(--uranium);
+	}
+	.text-charm__medal-platinum {
+		background: var(--platinum);
+	}
+	.text-charm__medal-gold {
+		background: var(--gold);
+	}
+	.text-charm__medal-silver {
+		background: var(--silver);
+	}
+	.text-charm__medal-bronze {
+		background: var(--bronze);
+	}
+	.text-charm__medal-tin {
+		background: var(--tin);
+	}
+	.text-charm__medal-driftwood {
+		background: var(--driftwood);
+	}
+   .user-tools {
+	   a {
+		   display:flex;
+		   max-width:fit-content;
+	   }
+	   .pinged {
+		   align-items: center;
+		   justify-content: center;
+		   &::after {
+			   transform: translateY(0rem);
+		   }
+	   }
+   }
+/*  .link--backdrop {
+ 			height: 100%;
+  			width: 100%;
+  			position: absolute;
+			z-index: -10;
+			opacity: 0.3;
+			img {
+				height: 100%;
+				width:100%;
+				object-fit: cover;
+				filter: blur(2px) brightness(0.5) !important;
+			}
+					&::before {
+ 		  content: '';
+ 		  display: block;
+ 		  position: absolute;
+		  inset: 0;
+		  width: 100%;
+		  height: 100%;
+		  background: var(--accent);
+		  mix-blend-mode: color;
+		  filter: brightness(0.2);
+		  z-index: 10;
+}
+		}*/
+	    .link::after {
+ 			opacity: 0.09;
+			font-size: clamp(5rem, 20.5vw, 11rem);
+			bottom: -6vw;
+		}
+		.link[data-feed-number="355"], .link[data-feed-number="1487"] {
+			--accent: #ff0060 !important;
+		}
+			.link[data-feed-number="355"]::after {
+			content:"🖌️" !important;
+			filter: sepia(100);
+		}
+			.link[data-feed-number="1487"]::after { 
+				content:"🌐" !important;
+				filter: sepia(100);
+			}
+			.link[data-feed-number="1487"] {
+				.link--device-in-use {
+					display:flex;
+				}
+				.link--device-in-use::before{
+					content: "mandorinn's website";
+					
+					
+				}
+	}
+
+}
+

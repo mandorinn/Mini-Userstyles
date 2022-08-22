@@ -1,0 +1,64 @@
+/* ==UserStyle==
+@name          Mocha Freecodecamp
+@namespace      mandorinn
+@version        1.0.0
+@description    Muted brown style for FCC
+@author         mandorinn
+==/UserStyle== */
+
+@-moz-document domain("freecodecamp.org") {
+    :root {
+--theme-color: rgb(39, 36, 35);
+--yellow-gold: #d0b191;
+--gray-00: rgb(240,207,192);
+--gray-05: rgb(214,187,174);
+--gray-10: rgb(189,177,172);
+--gray-15: rgb(189,177,172);
+--gray-45: rgb(71,67,65);
+--gray-75: rgb(60,56,54);
+--gray-80: rgb(60,56,54);
+--gray-85: rgb(43, 43, 43);
+--gray-90: rgb(35,35,35);
+--purple-light: rgb(179, 111, 178);
+--purple-dark: rgb(118, 82, 132);
+--yellow-light: rgb(179,154,111);
+--yellow-dark: rgb(139, 120, 86);
+--blue-light: rgb(104, 144, 198);
+--blue-light-translucent: rgba(104, 144, 198,.3);
+--blue-dark: rgb(74,104,143);
+--blue-dark-translucent: rgba(74,104,143,.3);
+--green-light: rgb(107,143,118);
+--blue-mid: rgb(90, 128, 176);
+--purple-mid: rgb(147, 102, 165);
+--green-dark: rgb(72, 98, 80);
+--red-light: #ffadad;
+--red-dark: rgb(140,72,73);
+--love-light: #f8577c;
+--love-dark: #f82153;
+--editor-background-light: rgb(240,207,192);
+--editor-background-dark: rgb(60,56,54);
+}
+
+.dark-palette .token.punctuation, .mtk10 {
+	color: var(--yellow-light);
+}
+.dark-palette .token.keyword, .mtk8 {
+	color : var(--blue-light);
+}
+
+.mtk7 {
+	color: var(--green-light);
+}
+
+.monaco-editor, .monaco-editor .inputarea.ime-input {
+	background-color: var(--editor-background-dark);
+}
+.monaco-editor .margin {
+	background-color: var(--gray-90);
+}
+
+.monaco-editor, .monaco-editor-background, .monaco-editor .inputarea.ime-input {
+	background-color: var(--editor-background-dark);
+}
+
+}
